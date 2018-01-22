@@ -1,0 +1,27 @@
+<%= form_with(model: start, local: true) do |form| %>
+  <% if start.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(start.errors.count, "error") %> prohibited this start from being saved:</h2>
+
+      <ul>
+      <% start.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :story %>
+    <%= form.text_field :story, id: :start_story %>
+  </div>
+
+  <div class="field">
+    <%= form.label :select %>
+    <%= form.text_field :select, id: :start_select %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

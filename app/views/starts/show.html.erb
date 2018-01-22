@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Story:</strong>
+  <%= @start.story %>
+</p>
+
+<p>
+  <strong>Select:</strong>
+  <%= @start.select %>
+</p>
+
+<%= link_to 'Edit', edit_start_path(@start) %> |
+<%= link_to 'Back', starts_path %>
